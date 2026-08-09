@@ -1,23 +1,33 @@
-# Bank Management System — JUnit 5
+# 🏦 Bank Management System — JUnit 5
 
-A small **Java banking application** built to practice clean business logic and professional **unit testing with JUnit 5**.
+A Java banking application built to demonstrate **clean business logic, validation, and automated unit testing with JUnit 5**.
 
-[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://www.java.com/)
-[![JUnit 5](https://img.shields.io/badge/JUnit-5-green)](https://junit.org/junit5/)
-[![Maven](https://img.shields.io/badge/Maven-build-red)](https://maven.apache.org/)
+The project is intentionally small, but follows the mindset used in backend development: define behaviour clearly, validate inputs, and verify important scenarios with repeatable tests.
+
+![Java](https://img.shields.io/badge/Java-17%2B-orange)
+![JUnit 5](https://img.shields.io/badge/JUnit-5-green)
+![Maven](https://img.shields.io/badge/Maven-build-red)
+
+## 🎯 Project Goals
+
+- Practice object-oriented Java development
+- Learn professional unit-testing fundamentals
+- Test both successful and invalid operations
+- Understand exception-based validation
+- Build confidence with Maven-based test execution
 
 ## ✨ Features
 
 - Create a bank account with an initial balance
-- Deposit money with input validation
+- Deposit money with validation
 - Withdraw money with balance validation
 - Check the current balance
-- Handle invalid operations using `IllegalArgumentException`
-- Automated unit tests for successful and failure scenarios
+- Reject invalid amounts using `IllegalArgumentException`
+- Automated positive, negative and exception-based test cases
 
-## 🧪 Testing Focus
+## 🧪 Testing Strategy
 
-This project demonstrates core JUnit 5 concepts:
+The test suite demonstrates:
 
 - `@Test`
 - `assertEquals()`
@@ -25,7 +35,7 @@ This project demonstrates core JUnit 5 concepts:
 - Positive test cases
 - Negative test cases
 - Exception testing
-- Isolating business logic from test code
+- Business-rule validation
 
 Example:
 
@@ -42,10 +52,12 @@ void depositShouldIncreaseBalance() {
 
 ## 🛠️ Tech Stack
 
-- **Java**
-- **JUnit 5**
-- **Maven**
-- **Git & GitHub**
+| Technology | Purpose |
+|---|---|
+| Java | Application and business logic |
+| JUnit 5 | Automated unit testing |
+| Maven | Build and test automation |
+| Git & GitHub | Version control |
 
 ## 📁 Project Structure
 
@@ -60,15 +72,13 @@ BankManagementTesting---JUnit5/
 └── README.md
 ```
 
-## ▶️ Run the Tests
-
-Make sure Maven is installed, then run:
+## ▶️ Run Tests
 
 ```bash
 mvn test
 ```
 
-## 🔍 Validation Rules
+## 🔍 Business Rules
 
 ### Deposit
 
@@ -81,19 +91,29 @@ mvn test
 - Amount greater than balance → `IllegalArgumentException`
 - Zero or negative amount → `IllegalArgumentException`
 
-## 🎯 Purpose
+## 💡 What This Demonstrates
 
-This project is part of my Java backend learning journey and demonstrates how I use **automated testing to verify application behaviour instead of relying only on manual testing**.
+This project shows that I can go beyond simply writing Java classes and also **verify application behaviour with automated tests**.
 
-## 🔮 Future Improvements
+Key engineering concepts practiced:
 
-- Multiple accounts
+- Encapsulation
+- Input validation
+- Exception handling
+- Unit testing
+- Test-driven thinking
+- Maven project structure
+
+## 🚀 Future Improvements
+
+- Multiple customer accounts
 - Account numbers
 - Transaction history
 - Money transfers
-- Database persistence
+- Database persistence with MySQL
 - Spring Boot REST API
+- Integration testing
 
----
+## 👨‍💻 Author
 
-**Author:** [Siva Bhallu](https://github.com/bhallusiva)
+**Siva Bhallu** — [GitHub](https://github.com/bhallusiva)
