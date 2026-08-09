@@ -1,69 +1,31 @@
-# BankManagementTesting - JUnit5
-A simple Bank Management System built using Java and JUnit 5. The project supports basic banking operations such as deposit, withdrawal, balance inquiry, and includes unit tests for validating business logic.
+# Bank Management System — JUnit 5
 
-# Bank Account Management System
+A small **Java banking application** built to practice clean business logic and professional **unit testing with JUnit 5**.
 
-A simple Java project created to practice **Unit Testing using JUnit 5**.
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://www.java.com/)
+[![JUnit 5](https://img.shields.io/badge/JUnit-5-green)](https://junit.org/junit5/)
+[![Maven](https://img.shields.io/badge/Maven-build-red)](https://maven.apache.org/)
 
-## Features
+## ✨ Features
 
-* Create a bank account with an initial balance
-* Deposit money
-* Withdraw money
-* Check account balance
-* Handle invalid transactions using exceptions
-* Unit testing with JUnit 5
+- Create a bank account with an initial balance
+- Deposit money with input validation
+- Withdraw money with balance validation
+- Check the current balance
+- Handle invalid operations using `IllegalArgumentException`
+- Automated unit tests for successful and failure scenarios
 
-## Technologies Used
+## 🧪 Testing Focus
 
-* Java
-* JUnit 5
-* Maven
-* Git & GitHub
+This project demonstrates core JUnit 5 concepts:
 
-## Project Structure
-
-```text
-BankManagementSystem
-│
-├── src
-│   ├── main
-│   │   └── java
-│   │       └── BankAccount.java
-│   │
-│   └── test
-│       └── java
-│           └── BankAccountTest.java
-│
-├── pom.xml
-└── README.md
-```
-
-## Operations
-
-### Deposit
-
-Adds money to the account balance.
-
-* Valid amount → Balance increases
-* Zero or negative amount → `IllegalArgumentException`
-
-### Withdraw
-
-Withdraws money from the account.
-
-* Valid amount → Balance decreases
-* Amount greater than balance → `IllegalArgumentException`
-* Zero or negative amount → `IllegalArgumentException`
-
-## JUnit 5 Test Cases
-
-The project includes tests for:
-
-* Successful deposit
-* Successful withdrawal
-* Withdrawal with insufficient balance
-* Deposit with a negative amount
+- `@Test`
+- `assertEquals()`
+- `assertThrows()`
+- Positive test cases
+- Negative test cases
+- Exception testing
+- Isolating business logic from test code
 
 Example:
 
@@ -78,22 +40,60 @@ void depositShouldIncreaseBalance() {
 }
 ```
 
-## Purpose
+## 🛠️ Tech Stack
 
-This project was created to understand the fundamentals of **JUnit 5**, including:
+- **Java**
+- **JUnit 5**
+- **Maven**
+- **Git & GitHub**
 
-* `@Test`
-* `assertEquals()`
-* `assertThrows()`
-* Positive test cases
-* Negative test cases
-* Exception testing
+## 📁 Project Structure
 
-## Future Improvements
+```text
+BankManagementTesting---JUnit5/
+├── src/
+│   ├── main/java/
+│   │   └── BankAccount.java
+│   └── test/java/
+│       └── BankAccountTest.java
+├── pom.xml
+└── README.md
+```
 
-* Multiple bank accounts
-* Account numbers
-* Transaction history
-* Transfer money between accounts
-* Database integration
-* Spring Boot REST API
+## ▶️ Run the Tests
+
+Make sure Maven is installed, then run:
+
+```bash
+mvn test
+```
+
+## 🔍 Validation Rules
+
+### Deposit
+
+- Positive amount → balance increases
+- Zero or negative amount → `IllegalArgumentException`
+
+### Withdrawal
+
+- Positive amount within available balance → balance decreases
+- Amount greater than balance → `IllegalArgumentException`
+- Zero or negative amount → `IllegalArgumentException`
+
+## 🎯 Purpose
+
+This project is part of my Java backend learning journey and demonstrates how I use **automated testing to verify application behaviour instead of relying only on manual testing**.
+
+## 🔮 Future Improvements
+
+- Multiple accounts
+- Account numbers
+- Transaction history
+- Money transfers
+- Database persistence
+- Spring Boot REST API
+
+---
+
+**Author:** [Siva Bhallu](https://github.com/bhallusiva)
